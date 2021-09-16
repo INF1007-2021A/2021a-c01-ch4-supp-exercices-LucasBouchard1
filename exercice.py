@@ -3,11 +3,11 @@
 
 import random
 
-def is_even_len(string):
+def is_even_len(string : str) -> bool:
 	return True if len(string)%2==0 else False
 
 
-def get_num_char(string, char):
+def get_num_char(string : str, char : str) -> int:
 	num_char = 0
 	for x in string:
 		if x == char:
@@ -15,7 +15,7 @@ def get_num_char(string, char):
 	return num_char
 
 
-def get_first_part_of_name(name):
+def get_first_part_of_name(name : str) -> str:
 	first_name = ""
 	for lettre in name:
 		ascii_ = ord(lettre)
@@ -26,7 +26,7 @@ def get_first_part_of_name(name):
 	return first_name
 
 
-def get_random_sentence(animals, adjectives, fruits):
+def get_random_sentence(animals : tuple, adjectives : tuple, fruits : tuple) -> list:
 	phrases = []
 	for x in range(len(animals)):
 		phrases.append(f"Le {animals[x]} {adjectives[x]} mange des {fruits[x]}.")
